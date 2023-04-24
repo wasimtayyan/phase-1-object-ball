@@ -185,3 +185,19 @@ for(let team in game){
 return "player Not Found !!!"
 }
 console.log(playerStats("Alan Anderson"));
+
+function bigShoeRebounds(){
+    let largerPlaeyerShoe = 0;
+    let playerWithLargestShoeSize = null;
+    for (team in game){
+        const playeres = game[team].player
+        for(const playerName in playeres){
+            const playr = playeres[playerName]
+            if(playr.Shoe  > largerPlaeyerShoe){
+                largerPlaeyerShoe = playr.shoe;
+                playerWithLargestShoeSize = playr
+            }
+        }
+    }
+    return playerWithLargestShoeSize;
+}
